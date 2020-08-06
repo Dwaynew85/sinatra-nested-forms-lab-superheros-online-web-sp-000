@@ -16,7 +16,7 @@ class App < Sinatra::Base
       end
 
       @members = Hero.all
-      
+
       erb :'../views/team'
     end
 end
