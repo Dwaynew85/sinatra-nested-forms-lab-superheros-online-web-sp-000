@@ -9,8 +9,14 @@ class App < Sinatra::Base
     end
 
     post 'teams' do
-      binding.pry
+      @team = Team.new(params[:team])
 
+      params[:team][:members].each do |member|
+        Superhere.new(member)
+      end
+
+      @members = Hero.all
+      
       erb :'../views/team'
     end
 end
