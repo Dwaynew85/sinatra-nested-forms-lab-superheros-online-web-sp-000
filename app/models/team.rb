@@ -6,7 +6,7 @@ class Team
   def initialize(hash)
     @name = hash[:name]
     @motto = hash[:motto]
-    @@all << self 
+    @@all << self
   end
 
   def self.all
